@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	defaultTitle  = "Health Dashboard | Gatus"
-	defaultHeader = "Health Status"
+	defaultTitle  = "Health Dashboard "
+	defaultHeader = "GPUaaS Status Dashboard"
 	defaultLogo   = ""
 	defaultLink   = ""
 )

@@ -7,8 +7,8 @@
           <div class="text-3xl xl:text-5xl lg:text-4xl font-light">{{ header }}</div>
         </div>
         <div class="w-1/4 flex justify-end">
-          <a :href="link" target="_blank" style="width:100px">
-            <img v-if="logo" :src="logo" alt="Gatus" class="object-scale-down" style="max-width: 100px; min-width: 50px; min-height:50px;" />
+          <a :href="link" target="_blank" style="width:200">
+            <img v-if="logo" :src="logo" alt="Gatus" class="object-scale-down" style="max-width: 500px; min-width: 50px;" />
             <img v-else src="./assets/logo.svg" alt="Gatus" class="object-scale-down" style="max-width: 100px; min-width: 50px; min-height:50px;" />
           </a>
         </div>
@@ -48,12 +48,12 @@
   </div>
 
   <Tooltip :result="tooltip.result" :event="tooltip.event"/>
-  <Social/>
+  <h1>test1</h1>
 </template>
 
 
 <script>
-import Social from './components/Social.vue'
+
 import Tooltip from './components/Tooltip.vue';
 import {SERVER_URL} from "@/main";
 import Loading from "@/components/Loading";
@@ -62,7 +62,7 @@ export default {
   name: 'App',
   components: {
     Loading,
-    Social,
+   
     Tooltip
   },
   methods: {
@@ -86,7 +86,7 @@ export default {
       return window.config && window.config.logo && window.config.logo !== '{{ .Logo }}' ? window.config.logo : "";
     },
     header() {
-      return window.config && window.config.header && window.config.header !== '{{ .Header }}' ? window.config.header : "Health Status";
+      return window.config && window.config.header && window.config.header !== '{{ .Header }}' ? window.config.header : "GPUaaS Status Dashboard";
     },
     link() {
       return window.config && window.config.link && window.config.link !== '{{ .Link }}' ? window.config.link : null;
